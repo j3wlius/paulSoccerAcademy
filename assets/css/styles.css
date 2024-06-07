@@ -1,0 +1,123 @@
+/* Variables */
+:root {
+  --main-color: #6457a6;
+  --color2: #000;
+  --white: #fff;
+
+  --primary-font: "Poppins", sans-serif;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a,
+img,
+input,
+select,
+button,
+textarea {
+  display: block;
+}
+span {
+  display: inline-block;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+input,
+select,
+button,
+textarea {
+  background: none;
+  border: none;
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+input,
+select,
+textarea {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: var(--primary-font);
+}
+
+/* Reusable Styles */
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* === HEADER === */
+.desktop-nav {
+  display: none;
+}
+
+.top-nav {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.top-nav .container {
+  justify-content: space-between;
+  padding-block: 15px;
+}
+
+.contact-number {
+  gap: 10px;
+}
+
+.social-icons {
+  gap: 10px;
+}
+
+.btm-nav {
+  background-color: var(--color2);
+  color: #fff;
+  padding-block: 15px;
+}
+
+.btm-nav .container {
+  justify-content: space-between;
+}
+
+.navbar ul {
+  gap: 30px;
+}
+
+.active {
+  color: red;
+  border-bottom: 2px solid red;
+  padding-bottom: 3px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 992px) {
+  .desktop-nav {
+    display: block;
+  }
+}
