@@ -66,3 +66,52 @@ backToTopBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// CAROUSEL
+const carouselImages = document.querySelectorAll(".carousel-images img");
+const carouselNextBtn = document.querySelector(".next-button");
+const carouselPrevBtn = document.querySelector(".prev-button");
+
+let counter = 0;
+
+// Next button
+function nextImageSlide() {
+  carouselImages[counter].style.animation = "next1 0.5s forwards";
+
+  counter >= carouselImages.length - 1 ? (counter = 0) : counter++;
+
+  carouselImages[counter].style.animation = "next2 0.5s forwards";
+}
+
+carouselNextBtn.addEventListener("click", nextImageSlide);
+
+// Prev Button
+function prevImageSlide() {
+  carouselImages[counter].style.animation = "prev1 0.5s forwards";
+
+  counter <= 0 ? (counter = carouselImages.length - 1) : counter--;
+
+  carouselImages[counter].style.animation = "prev2 0.5s forwards";
+}
+
+carouselPrevBtn.addEventListener("click", prevImageSlide);
+
+// Auto slides
+function autoSlides() {
+  setSlideTime = setInterval(slide, 2500);
+  function slide() {
+    nextImageSlide();
+  }
+}
+
+autoSlides();
+
+// Stop auto slide when mouse is over
+const carouselContainer = document.querySelector(".carousel-container");
+
+carouselContainer.addEventListener("mouseover", () => {
+  clearInterval(setSlideTime);
+});
+
+// Resume auto slide when mouse is out
+carouselContainer.addEventListener("mouseout", autoSlides);
