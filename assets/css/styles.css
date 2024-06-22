@@ -317,6 +317,33 @@ body {
   }
 }
 
+/* ABOUT US */
+.about-us {
+  padding: 40px;
+  margin: 50px auto;
+}
+
+.about-us h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us p {
+  font-size: 1.8rem;
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
 /*=== BACK TO TOP BTN ===*/
 .back-to-top {
   position: fixed;
@@ -374,6 +401,23 @@ body {
   .main {
     position: relative;
     top: 10vh;
+  }
+
+  /* ABOUT US */
+  .about-us-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .text-content {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  .image-content {
+    width: 50%;
+    text-align: right;
   }
 }
 
